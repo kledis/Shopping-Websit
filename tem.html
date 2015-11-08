@@ -1,0 +1,381 @@
+<html>
+    <head>
+        <title>Homework8</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://demo.jq22.com/bootstrapvalidator-master/dist/css/bootstrapValidator.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="http://demo.jq22.com/bootstrapvalidator-master/vendor/jquery/jquery-1.10.2.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://demo.jq22.com/bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
+<script src="jquery.js.js"></script>
+<script src="jquery.validate.js"></script>
+<script type="text/javascript">
+
+//setStatusThroughFBUI('topic', 'subtopic', 'whats this', 'http://cs-server.usc.edu:45678/hw/hw8/ebay.jpg', 'baidu.com')
+$(document).ready(function() {
+        
+    $('#defaultForm').bootstrapValidator(
+    {
+//        live: 'disabled',
+        message: 'This value is not valid',
+        submitButtons: 'button[type="submit"]',
+        feedbackIcons: 
+        {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: 
+        {
+            keyWords: 
+            {
+                validators: 
+                {
+                    notEmpty: 
+                    {
+                        message: 'The keyword is required and cannot be empty'
+                    }
+                }
+            },
+            lowPrice: 
+            {
+                validators: {
+                    numeric: {
+                        message: 'price must be a valid number'
+                    },
+                    greaterThan: {
+                        min: 0,
+                        message: 'minimum price cannot be below 0'
+                    }
+                    
+                }
+            },
+        
+            highPrice: 
+            {
+                validators: {
+                    numeric: {
+                        message: 'The price must be a number'
+                    },
+                    callback: {
+                        message: 'maximum price should be larger than minimum price and be positive',
+                        callback: function(value, validator) {
+                            if($("#highPrice").val()<0)
+                            {
+                                return false;
+                            }
+                            else if($("#highPrice").val()=="")
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                
+                                return ($("#highPrice").val())>($("#lowPrice").val());
+                            }
+                        }
+                    }
+                   
+                }
+            },
+            maxHandlingTime:
+            {
+                validators: {
+                    integer: {
+                        message: 'The handling time must be integer day'
+                    },
+                    between: {
+                        min: 1,
+                        max: 90000,
+                        message: 'minimum cannot be below 1'
+                    }
+                }
+            }
+        
+        }
+    })
+    .on('err.field.fv', function(e, data) {
+            if (data.fv.getSubmitButton()) {
+                data.fv.disableSubmitButtons(true);
+            }
+        })
+    .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
+                data.fv.disableSubmitButtons(true);
+                
+            }
+        });
+
+    // Validate the form manually
+    $('#search').click(function() {
+        $('#defaultForm').bootstrapValidator('validate');
+        
+        //{
+         //}
+});
+
+    $('#clear').click(function() {
+        $('#defaultForm').data('bootstrapValidator').resetForm(true);
+    });
+    $( "#defaultForm" ).submit(function( event ) {
+        var flag=0;
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            if($('#highPrice').val()<=$('#lowPrice').val())
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message!");
+        }
+        
+        if(flag==0)
+        {
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/converter.php', // this is the parameter list
+data: { 
+    
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),
+    resultPerPage:$("resultPerPage").val(),
+    sortBy:$("#sortBy").val(),
+    new:true,
+    
+    resultPerPage:5,
+    sortBy: 'BestMatch'
+    
+    
+}, type: 'POST',
+success: function(output) {
+    alert(output);
+// parse the data here
+},
+error: function(output){
+    alert(output);
+}
+});}
+       
+        
+});
+    
+});
+</script>
+    </head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '843857382339341',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+    function login(addr, lsp, thirtychange, imgshow, link) {
+          FB.login(function(response) {
+              if (response.authResponse) {
+                  // User authorized app
+              } else {
+                  // User cancelled login or did not fully authorize
+              }
+          }, {scope: 'publish_stream'});
+          
+          setStatusThroughFBUI(addr, lsp, thirtychange, imgshow, link);
+        }
+        
+        function setStatusThroughFBUI(addr, lsp, thirtychange, imgshow, link) {
+          var text, obj;
+          var obj = {
+            method: 'feed',       
+            link: link,
+                name: addr,
+                caption: 'Property Information from Zillow.com',
+                description: "Last Sold Price: "+lsp+", Thirty Days Overall Change: "+thirtychange,
+                picture: imgshow
+            };
+                
+            function callback(response) {
+                if(response)
+                    alert("Post Successfully!");
+                else
+                    alert("unsuccessfully!");
+            }
+         
+            FB.ui(obj, callback);
+        }
+</script>
+    
+<div class="container-fluid">
+<div class="row">	
+    <div class="col-xs-12 col-sm-9 col-md-8 col-sm-offset-1 col-md-offset-1">
+    <img src="http://cs-server.usc.edu:45678/hw/hw8/ebay.jpg" class="col-xs-4 col-sm-4 col-md-2">              
+    <h3 class="col-xs-4 col-sm-4 col-md-2">Shopping</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-2">
+		<form id="defaultForm" method="post">
+            
+			<hr class="colorgraph">
+            <div class="form-group">
+                <div class="row">
+                    <div  class="col-xs-4 col-sm-3 col-md-2">     
+                    <h5>Key words<font color='red'>*</font>:</h5>
+                    </div>
+                    <div  class="col-xs-10 col-sm-10 col-md-10">
+                    <div class="form-group">
+				    <input type="text"  name="keyWords" id="keyWords" class="form-control" placeholder="Key words" tabindex="1">
+                    </div>
+                    </div>
+                </div>
+                
+			</div>
+			<div class="row">
+					<h5 class="col-xs-4 col-sm-4 col-md-2">Price range:</h5>
+				
+					<div class="col-xs-10 col-sm-10 col-md-5">
+                    <div class="form-group">                
+                        <input type="text" name="lowPrice" id="lowPrice" class="form-control" placeholder="from($)" tabindex="2"></div>
+					</div>
+				
+				<div class="col-xs-10 col-sm-10 col-md-5">
+					<div class="form-group">
+						<input type="text" name="highPrice" id="highPrice" class="form-control" placeholder="to($)" tabindex="3">
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                
+				<h5 class="col-xs-4 col-sm-4 col-md-2">Condition:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="new" id="new" value="New" >New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="used" id="used" value="Used" >Used&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="veryGood" id="veryGood" value="Very Good" >Very Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="good" id="good" value="Good">Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="acceptable" id="acceptable" value="Acceptable">Acceptable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+					
+                </div>
+			</div>
+			<div class="row">
+                
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Buying formats:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="butItNow" id="buyItNow" value="b" >Buy It Now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="auction" id="auction" value="a" >Auction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="classifiedAds" id="classifiedAds" value="c" >Classified Ads&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+			<div class="row">
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Seller:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="returnAccepted" id="returnAccepted" value="r" >Return accepted&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+            <div class="row">
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Shipping:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="freeShipping" id="freeShipping" value="f" >Free Shipping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="expedited" id="expedited" value="e" >Expedited Shipping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+                <div class="row">
+                    <h5 class="col-xs-8 col-sm-8 col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                    <div  class="col-xs-10 col-sm-10 col-md-10">
+                    <div class="form-group">
+				    <input type="text" name="maxHandlingTime" id="maxHandlingTime" class="form-control"  placeholder="Max handling time(days)" tabindex="4">
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="row">
+            <h5 class="col-xs-8 col-sm-8 col-md-2">Sort by:</h5>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 ">
+                
+                    <select name="sortBy"class="form-control">
+                      <option value="BestMatch">Best Match</option>
+                      <option value="CurrentPriceHighest">Price: highest first</option>
+                      <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
+                      <option value="PricePlusShippingLowest">Price + Shipping: lowest first</option>
+                    </select>
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="col-xs-8 col-sm-8 col-md-2">Results per page:</h5>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 ">
+                
+                    <select name="resultPerPage"class="form-control">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+            </div>
+        </div>
+			<hr class="colorgraph">
+			<div class="row">
+                <div class="col-xs-3 col-md-2 col-md-offset-8"><input type="reset" name="clear" value="Clear" id="clear" align="right" class="btn btn-default btn-block btn-lg"></div>
+				<div class="col-xs-3 col-md-2"><input type="submit" value="Search" id="search" name="search" align="right" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				
+			</div>
+		</form>
+	</div>
+</div>
+
+</div>
+    <p id="hhh"></p>
+</body>
+</html>

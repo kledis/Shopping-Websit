@@ -1,0 +1,2648 @@
+<html>
+    <head>
+        <title>Happy Shopping!</title>
+        <meta charset="utf-8">
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+<link rel="stylesheet" href="http://demo.jq22.com/bootstrapvalidator-master/dist/css/bootstrapValidator.css">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+<script src="http://demo.jq22.com/bootstrapvalidator-master/vendor/jquery/jquery-1.10.2.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="http://demo.jq22.com/bootstrapvalidator-master/dist/js/bootstrapValidator.js"></script>
+<script src="http://second.elasticbeanstalk.com/jquery.js.js"></script>
+<script src="http://second.elasticbeanstalk.com/jquery.validate.js"></script>
+<script src="https://github.com/jschr/bootstrap-modal/blob/master/js/bootstrap-modal.js"></script>
+<script src="https://github.com/jschr/bootstrap-modal/blob/master/js/bootstrap-modalmanager.js"></script>
+<script type="text/javaScript">
+function showResult(output)
+{
+    var ope=document.getElementById("result");
+    //ope.innerHTML=output;
+    var obj = JSON.parse(output);
+    if(parseInt(obj.resultCount)>=1)
+    if((obj.item0.basicInfo.title)=="[object Object]")
+    {
+        obj.item0.basicInfo.title=$("#keyWords").val()+" from "+ obj.item0.sellerInfo.sellerStoreName;
+    }
+    if(parseInt(obj.resultCount)>=2)
+    if((obj.item1.basicInfo.title)=="[object Object]")
+    {
+        obj.item1.basicInfo.title=$("#keyWords").val()+" from "+ obj.item1.sellerInfo.sellerStoreName;
+    }
+    if(parseInt(obj.resultCount)>=3)
+    if((obj.item2.basicInfo.title)=="[object Object]")
+    {
+        obj.item2.basicInfo.title=$("#keyWords").val()+" from "+ obj.item2.sellerInfo.sellerStoreName;
+    }
+    if(parseInt(obj.resultCount)>=4)
+    if((obj.item3.basicInfo.title)=="[object Object]")
+    {
+        obj.item3.basicInfo.title=$("#keyWords").val()+" from "+ obj.item3.sellerInfo.sellerStoreName;
+    }
+    if(parseInt(obj.resultCount)>=5)
+    if((obj.item4.basicInfo.title)=="[object Object]")
+    {
+        obj.item4.basicInfo.title=$("#keyWords").val()+" from "+ obj.item4.sellerInfo.sellerStoreName;
+    }
+    if((obj.itemCount=='10')||(obj.itemCount==10))
+    {
+        if(parseInt(obj.resultCount)>=6)
+    if((obj.item5.basicInfo.title)=="[object Object]")
+    {
+        obj.item5.basicInfo.title=$("#keyWords").val()+" from "+ obj.item5.sellerInfo.sellerStoreName;
+    }
+        if(parseInt(obj.resultCount)>=7)
+    if((obj.item6.basicInfo.title)=="[object Object]")
+    {
+        obj.item6.basicInfo.title=$("#keyWords").val()+" from "+ obj.item6.sellerInfo.sellerStoreName;
+    }
+        if(parseInt(obj.resultCount)>=8)
+    if((obj.item7.basicInfo.title)=="[object Object]")
+    {
+        obj.item7.basicInfo.title=$("#keyWords").val()+" from "+ obj.item7.sellerInfo.sellerStoreName;
+    }
+        if(parseInt(obj.resultCount)>=9)
+    if((obj.item8.basicInfo.title)=="[object Object]")
+    {
+        obj.item8.basicInfo.title=$("#keyWords").val()+" from "+ obj.item8.sellerInfo.sellerStoreName;
+    }
+        if(parseInt(obj.resultCount)>=10)
+    if((obj.item9.basicInfo.title)=="[object Object]")
+    {
+        obj.item9.basicInfo.title=$("#keyWords").val()+" from "+ obj.item9.sellerInfo.sellerStoreName;
+    }
+    }
+    
+    
+    if(parseInt(obj.resultCount)>=1)
+    if((obj.item0.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item0.basicInfo.shippingServiceCost=0;
+    }
+    if(parseInt(obj.resultCount)>=2)
+    if((obj.item1.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item1.basicInfo.shippingServiceCost=0;
+    }
+    if(parseInt(obj.resultCount)>=3)
+    if((obj.item2.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item2.basicInfo.shippingServiceCost=0;
+    }
+    if(parseInt(obj.resultCount)>=4)
+    if((obj.item3.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item3.basicInfo.shippingServiceCost=0;
+    }
+    if(parseInt(obj.resultCount)>=5)
+    if((obj.item4.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item4.basicInfo.shippingServiceCost=0;
+    }
+    
+    
+    if((obj.itemCount=='10')||(obj.itemCount==10))
+    {
+        if(parseInt(obj.resultCount)>=6)
+    if((obj.item5.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item5.basicInfo.shippingServiceCost=0;
+    }
+        if(parseInt(obj.resultCount)>=7)
+    if((obj.item6.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item6.basicInfo.shippingServiceCost=0;
+    }
+        if(parseInt(obj.resultCount)>=8)
+    if((obj.item7.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item7.basicInfo.shippingServiceCost=0;
+    }
+        if(parseInt(obj.resultCount)>=9)
+    if((obj.item8.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item8.basicInfo.shippingServiceCost=0;
+    }
+        if(parseInt(obj.resultCount)>=10)
+    if((obj.item9.basicInfo.shippingServiceCost)=="[object Object]")
+    {
+        obj.item9.basicInfo.shippingServiceCost=0;
+    }
+    }
+    
+    
+    var result="<br><br><br>";
+    if(obj.resultCount!=0)
+    {
+        document.getElementById("pageNumber").innerHTML=obj.pageNumber;
+        var pageNum=obj.pageNumber;
+        var last=pageNum*(obj.itemCount);
+        var first=last-(obj.itemCount)+1;
+        result=result+"<div class=\"row\" >"+"<div class=\"col-xs-10 col-sm-10 col-md-10\">"+"<h3>";
+        result=result+first+"-"+last+" items out of "+obj.resultCount;
+        result=result+"</h3></div></div>";
+        
+        result=result+"<div class=\"row\" >"+"<div class=\"col-xs-12 col-sm-10 col-md-10\">";
+        var iter=1;
+        //while(iter<=obj.itemCount)
+        //{
+            var name="item"+(iter-1);
+            //result=result+"<div class=\"row\" >"+"<div class=\"col-xs-12 col-sm-12 col-md-12\">";
+            
+           
+            if(parseInt(obj.resultCount)>=1)
+            {
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item0.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem0\"><img width=\"100\" height=\"80\" align=\"center\"    src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem0' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem0'>"+obj.item0.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item0.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item0.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item0.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item0.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item0.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item0.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item0.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item0.basicInfo.location;
+            if(obj.item0.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem0' onclick='document.getElementById(\"myTabitem0\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item0.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem0' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem0' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem0' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem0' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item0.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item0.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item0.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item0.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item0.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item0.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item0.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item0.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item0.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item0.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item0.sellerInfo.sellerStoreURL+"'>"+obj.item0.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item0.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item0.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item0.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item0.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item0.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item0.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem0' class='tab-content'><div class='tab-pane fade' id='basicitem0'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem0'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem0'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+            }
+        
+        //item1
+        //item1
+        //item1
+        
+            
+           
+            if(parseInt(obj.resultCount)>=2)
+            {
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item1.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem1\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem1' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem1'>"+obj.item1.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item1.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item1.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item1.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item1.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item1.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item1.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item1.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item1.basicInfo.location;
+            if(obj.item1.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem1' onclick='document.getElementById(\"myTabitem1\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item1.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem1' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem1' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem1' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem1' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item1.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item1.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item1.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item1.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item1.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item1.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item1.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item1.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item1.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item1.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item1.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item1.sellerInfo.sellerStoreURL+"'>"+obj.item1.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item1.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item1.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item1.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item1.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item1.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item1.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem1' class='tab-content'><div class='tab-pane fade' id='basicitem1'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem1'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem1'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+            
+            }
+    //item2
+        //item2
+        //item2
+        
+            
+           if(parseInt(obj.resultCount)>=3)
+            {
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item2.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem2\"><img width=\"100\" height=\"80\" align=\"center\"    src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem2' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem2'>"+obj.item2.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item2.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item2.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item2.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item2.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item2.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item2.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item2.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item2.basicInfo.location;
+            if(obj.item2.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem2' onclick='document.getElementById(\"myTabitem2\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item2.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem2' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem2' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem2' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem2' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item2.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item2.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item2.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item2.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item2.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item2.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item2.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item2.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item2.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item2.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item2.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item2.sellerInfo.sellerStoreURL+"'>"+obj.item2.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item2.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item2.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item2.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item2.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item2.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item2.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem2' class='tab-content'><div class='tab-pane fade' id='basicitem2'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem2'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem2'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+        
+        
+            }
+        
+        //item3
+        //item3
+        //item3
+        
+            if(parseInt(obj.resultCount)>=4)
+            {
+           
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item3.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem3\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem3' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem3'>"+obj.item3.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item3.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item3.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item3.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item3.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item3.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item3.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item3.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item3.basicInfo.location;
+            if(obj.item3.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem3' onclick='document.getElementById(\"myTabitem3\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item3.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem3' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem3' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem3' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem3' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item3.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item3.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item3.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item3.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item3.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item3.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item3.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item3.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item3.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item3.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item3.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item3.sellerInfo.sellerStoreURL+"'>"+obj.item3.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item3.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item3.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item3.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item3.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item3.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item3.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem3' class='tab-content'><div class='tab-pane fade' id='basicitem3'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem3'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem3'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+        
+            }
+        //item4
+        //item4
+        //item4
+        
+            if(parseInt(obj.resultCount)>=5)
+            {
+           
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item4.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem4\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem4' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem4'>"+obj.item4.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item4.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item4.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item4.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item4.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item4.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item4.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item4.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item4.basicInfo.location;
+            if(obj.item4.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem4' onclick='document.getElementById(\"myTabitem4\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item4.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem4' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem4' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem4' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem4' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item4.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item4.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item4.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item4.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item4.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item4.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item4.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item4.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item4.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item4.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item4.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item4.sellerInfo.sellerStoreURL+"'>"+obj.item4.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item4.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item4.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item4.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item4.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item4.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item4.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem4' class='tab-content'><div class='tab-pane fade' id='basicitem4'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem4'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem4'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+            }
+            //result=result+"</div><div><br><br>";
+            
+            iter=iter+1;
+        //}
+         if(obj.itemCount==10)
+         {
+             //item5
+        //item5
+        //item5
+        
+            
+           
+            if(parseInt(obj.resultCount)>=6)
+            {
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item5.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem5\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem5' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem5'>"+obj.item5.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item5.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item5.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item5.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item5.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item5.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item5.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item5.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item5.basicInfo.location;
+            if(obj.item5.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem5' onclick='document.getElementById(\"myTabitem5\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item5.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem5' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem5' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem5' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem5' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item5.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item5.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item5.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item5.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item5.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item5.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item5.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item5.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item5.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item5.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item5.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item5.sellerInfo.sellerStoreURL+"'>"+obj.item5.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item5.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item5.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item5.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item5.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item5.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item5.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem5' class='tab-content'><div class='tab-pane fade' id='basicitem5'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem5'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem5'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+             
+            }
+             
+             
+             //item6
+        //item6
+        //item6
+        
+            
+           if(parseInt(obj.resultCount)>=7)
+            {
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item6.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem6\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem6' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem6'>"+obj.item6.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item6.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item6.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item6.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item6.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item6.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item6.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item6.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item6.basicInfo.location;
+            if(obj.item6.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem6' onclick='document.getElementById(\"myTabitem6\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item6.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem6' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem6' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem6' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem6' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item6.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item6.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item6.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item6.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item6.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item6.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item6.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item6.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item6.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item6.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item6.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item6.sellerInfo.sellerStoreURL+"'>"+obj.item6.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item6.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item6.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item6.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item6.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item6.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item6.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem6' class='tab-content'><div class='tab-pane fade' id='basicitem6'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem6'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem6'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+             
+            }
+             //item7
+        //item7
+        //item7
+        
+            
+           if(parseInt(obj.resultCount)>=8)
+            {
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item7.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem7\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem7' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem7'>"+obj.item7.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item7.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item7.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item7.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item7.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item7.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item7.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item7.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item7.basicInfo.location;
+            if(obj.item7.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem7' onclick='document.getElementById(\"myTabitem7\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item7.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem7' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem7' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem7' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem7' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item7.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item7.basicInfo.categoryName+"</td></tr><tr>";
+        }
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item7.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item7.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item7.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item7.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item7.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item7.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item7.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item7.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item7.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item7.sellerInfo.sellerStoreURL+"'>"+obj.item7.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item7.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item7.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item7.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item7.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item7.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item7.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem7' class='tab-content'><div class='tab-pane fade' id='basicitem7'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem7'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem7'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+             
+            }
+             
+             //item8
+        //item8
+        //item8
+        
+            if(parseInt(obj.resultCount)>=9)
+            {
+           
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item8.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem8\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem8' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem8'>"+obj.item8.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item8.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item8.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item8.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item8.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item8.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item8.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item8.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item8.basicInfo.location;
+            if(obj.item8.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem8' onclick='document.getElementById(\"myTabitem8\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item8.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem8' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem8' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem8' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem8' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+             if((typeof obj.item8.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item8.basicInfo.categoryName+"</td></tr><tr>";
+        }
+       // basicInfoStr=basicInfoStr+"<td>"+obj.item8.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item8.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item8.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item8.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item8.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item8.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item8.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item8.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item8.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item8.sellerInfo.sellerStoreURL+"'>"+obj.item8.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item8.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item8.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item8.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item8.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item8.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item8.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem8' class='tab-content'><div class='tab-pane fade' id='basicitem8'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem8'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem8'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table><br><br>";
+             
+            }
+             
+             //item9
+        //item9
+        //item9
+        
+            
+          if(parseInt(obj.resultCount)>=10)
+            { 
+            
+            result=result+"<table class='col-xs-10 col-sm-10 col-md-12'  ><tr><td>";
+            var imgURL=obj.item9.basicInfo.galleryURL;
+            result=result+"<a data-toggle=\"modal\" data-target=\"#myModalitem9\"><img width=\"100\" height=\"80\" align=\"center\"   src=\""+imgURL+"\"></a>";
+        result=result+"<div class='col-xs-11 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1 modal fade' id='myModalitem9' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'><div class='modal-dialog'><div class='modal-content'><div class='modal-header'><button type='button' class='close' data-dismiss='modal' aria-hidden='true'>&times;</button><h4 class='modal-title' id='myModalLabelitem9'>"+obj.item9.basicInfo.title+"</h4></div><div class='modal-body'><div class='row'><img align='center' class='col-xs-12 col-sm-12 col-md-12' src='"+obj.item9.basicInfo.pictureURLSuperSize+"'></div></div><div class='modal-footer'><button type='button' class='btn btn-default' data-dismiss='modal'>close</button></div></div></div>";
+        
+            result=result+"</td>";
+            result=result+"<td class=\"col-xs-6 col-sm-8 col-md-8\">";
+            var itemURL=obj.item9.basicInfo.viewItemURL;
+            result=result+"<a href=\""+itemURL+"\">"+"<h4>"+obj.item9.basicInfo.title+"</h4>"+"</a><br>";
+            var priceStr="";
+            var locationStr="Location:";
+            result=result+"<b>Price:$"+obj.item9.basicInfo.convertedCurrentPrice+"</b>";
+            priceStr=priceStr+"Price:$"+obj.item9.basicInfo.convertedCurrentPrice;
+            var shipCost=obj.item9.basicInfo.shippingServiceCost;
+            
+            if (parseFloat(shipCost)==0)
+            {
+                result=result+"(Free Shipping)";
+                priceStr=priceStr+"(Free Shipping)";
+            }
+            else
+            {
+                result=result+"shipping:$"+shipCost;
+                priceStr=priceStr+"shipping:$"+shipCost;
+            }
+            result=result+"&nbsp;&nbsp;&nbsp;Location:";
+            result=result+obj.item9.basicInfo.location+"<br>";
+            locationStr=locationStr+obj.item9.basicInfo.location;
+            if(obj.item9.basicInfo.topRatedListing=="true")
+            {
+                result=result+"<img width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/itemTopRated.jpg\">"+"&nbsp;&nbsp;&nbsp;";
+            }
+        result=result+"<a href='#myTabitem9' onclick='document.getElementById(\"myTabitem9\").style.visibility=\"visible\";'>view details</a>";
+        
+         result=result+"&nbsp;&nbsp;<img onclick=\"setStatusThroughFBUI('"+obj.item9.basicInfo.title+"','"+priceStr+"', '"+locationStr+"','"+imgURL+"', 'baidu.com');\" width=20 height=20 src=\"http://cs-server.usc.edu:45678/hw/hw8/fb.png\">";
+        
+        result=result+"<ul id='myTabitem9' style='visibility:hidden' class='nav nav-tabs'><li><a href='#basicitem9' data-toggle='tab'>Basic Info</a></li><li><a href='#selleritem9' data-toggle='tab'>Seller Info</a></li><li><a href='#shippingitem9' data-toggle='tab'>Shipping Info</a></li></ul>";
+        
+        var basicInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Category Name</b></td>";
+        if((typeof obj.item9.basicInfo.categoryName)!=String)
+        {
+             basicInfoStr=basicInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        else
+        {
+            basicInfoStr=basicInfoStr+"<td>"+obj.item9.basicInfo.categoryName+"</td></tr><tr>";
+        }   
+        //basicInfoStr=basicInfoStr+"<td>"+obj.item9.basicInfo.categoryName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Condition</b></td>";
+        basicInfoStr=basicInfoStr+"<td>"+obj.item9.basicInfo.conditionDisplayName+"</td></tr><tr>";
+        basicInfoStr=basicInfoStr+"<td><b>Buying format</b></td>";
+        var tem=obj.item9.basicInfo.listingType;
+        if(tem=="FixedPrice"||tem=="StoreInventory")
+        {
+            tem="Buy It Now";
+        }
+        else if(tem=="Auction"||tem=="AuctionWithBIN")
+        {
+            tem="Auction";
+        }
+        else if(tem=="Classified")
+        {
+            tem="Classified Ad";
+        }
+        else{
+            tem="N.A.";
+        }
+        basicInfoStr=basicInfoStr+"<td>"+tem+"</td></tr></table>";
+        
+        var sellerInfoStr="<table class='col-xs-8 col-sm-8 col-md-8'><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>User Name</b></td>";
+        if(obj.item9.sellerInfo.sellerUserName!="")
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+obj.item9.sellerInfo.sellerUserName+"</td></tr><tr>";
+        }
+        else
+        {
+            sellerInfoStr=sellerInfoStr+"<td>"+"N.A."+"</td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Score</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item9.sellerInfo.feedbackScore+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Positive Feedback</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item9.sellerInfo.positiveFeedbackPercent+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Feedback Rating</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td>"+obj.item9.sellerInfo.feedbackRatingStar+"</td></tr><tr>";
+        sellerInfoStr=sellerInfoStr+"<td><b>Top Rated</b></td>";
+        if(obj.item9.sellerInfo.topRatedSeller=="true")
+        {
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            sellerInfoStr=sellerInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        sellerInfoStr=sellerInfoStr+"<td><b>store</b></td>";
+        sellerInfoStr=sellerInfoStr+"<td><a href='"+obj.item9.sellerInfo.sellerStoreURL+"'>"+obj.item9.sellerInfo.sellerUserName+"</a></td></tr></table>";
+        
+        var shippingInfoStr="<table class='col-xs-6 col-sm-6 col-md-6'><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Type</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item9.shippingInfo.shippingType+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>handling Time</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item9.shippingInfo.handlingTime+" day(s)</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Shipping Locations</b></td>";
+        shippingInfoStr=shippingInfoStr+"<td>"+obj.item9.shippingInfo.shipToLocations+"</td></tr><tr>";
+        shippingInfoStr=shippingInfoStr+"<td><b>Expedited Shipping</b></td>";
+        if(obj.item9.shippingInfo.expeditedShipping=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>One Day Shipping</b></td>";
+        if(obj.item9.shippingInfo.oneDayShippingAvailable=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr><tr>";
+        }
+        shippingInfoStr=shippingInfoStr+"<td><b>Returns Accepted</b></td>";
+        if(obj.item9.shippingInfo.returnsAccepted=="true")
+        {
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(20, 200, 64);' class='glyphicon glyphicon-ok'></i></td></tr><tr>";
+        }
+        else{
+            shippingInfoStr=shippingInfoStr+"<td><i style='color: rgb(255, 106, 64);' class='glyphicon glyphicon-remove'></i></td></tr></table>";
+        }
+        result=result+"<div id='myTabContentitem9' class='tab-content'><div class='tab-pane fade' id='basicitem9'>"+basicInfoStr+"</div><div class='tab-pane fade' id='selleritem9'>"+sellerInfoStr+"</div><div class='tab-pane fade' id='shippingitem9'>"+shippingInfoStr+"</div></div>";
+        
+        
+        
+           
+            result=result+"</td></tr></table></td></tr></table>";
+            }
+             
+         }
+        
+        
+        document.getElementById("pageFinder").style.visibility="visible";
+        var temPageNum1=parseInt(obj.pageNumber);
+        var temPageNum2=temPageNum1+1;
+        var temPageNum3=temPageNum2+1;
+        var temPageNum4=temPageNum3+1;
+        var temPageNum5=temPageNum4+1;
+document.getElementById("pageNumber").innerHTML=temPageNum1;
+document.getElementById("page1").innerHTML="<a href='#'>"+temPageNum1+"</a>";
+document.getElementById("page2").innerHTML="<a href='#'>"+temPageNum2+"</a>";
+document.getElementById("page3").innerHTML="<a href='#'>"+temPageNum3+"</a>";
+document.getElementById("page4").innerHTML="<a href='#'>"+temPageNum4+"</a>";
+document.getElementById("page5").innerHTML="<a href='#'>"+temPageNum5+"</a>";
+       if(temPageNum1==1)
+       {
+           document.getElementById("page000").setAttribute("class", "disabled");
+            
+       }
+        else{
+            document.getElementById("page000").setAttribute("class", "");
+        }
+        result=result+"</div></div>";
+        
+        
+    }
+    else{
+        result=result+"<h3>No result found!</h3>";
+    }
+    ope.innerHTML=result;
+}
+</script>
+<script type="text/javascript">
+
+//setStatusThroughFBUI('topic', 'subtopic', 'whats this', 'http://cs-server.usc.edu:45678/hw/hw8/ebay.jpg', 'baidu.com')
+$(document).ready(function() {
+        
+    $('#defaultForm').bootstrapValidator(
+    {
+//        live: 'disabled',
+        message: 'This value is not valid',
+        submitButtons: 'button[type="submit"]',
+        feedbackIcons: 
+        {
+            valid: 'glyphicon glyphicon-ok',
+            invalid: 'glyphicon glyphicon-remove',
+            validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: 
+        {
+            keyWords: 
+            {
+                validators: 
+                {
+                    notEmpty: 
+                    {
+                        message: 'The keyword is required and cannot be empty'
+                    }
+                }
+            },
+            lowPrice: 
+            {
+                validators: {
+                    numeric: {
+                        message: 'price must be a valid number'
+                    },
+                    greaterThan: {
+                        min: 0,
+                        message: 'minimum price cannot be below 0'
+                    }
+                    
+                }
+            },
+        
+            highPrice: 
+            {
+                validators: {
+                    numeric: {
+                        message: 'The price must be a number'
+                    },
+                    callback: {
+                        message: 'maximum price should be larger than minimum price and be positive',
+                        callback: function(value, validator) {
+                            if($("#highPrice").val()<0)
+                            {
+                                return false;
+                            }
+                            else if($("#highPrice").val()=="")
+                            {
+                                return true;
+                            }
+                            else
+                            {
+                                
+                                return parseFloat($("#highPrice").val())>parseFloat($("#lowPrice").val());
+                            }
+                        }
+                    }
+                   
+                }
+            },
+            maxHandlingTime:
+            {
+                validators: {
+                    integer: {
+                        message: 'The handling time must be integer day'
+                    },
+                    between: {
+                        min: 1,
+                        max: 90000,
+                        message: 'minimum cannot be below 1'
+                    }
+                }
+            }
+        
+        }
+    })
+    .on('err.field.fv', function(e, data) {
+            if (data.fv.getSubmitButton()) {
+                data.fv.disableSubmitButtons(true);
+            }
+        })
+    .on('success.field.fv', function(e, data) {
+            if (data.fv.getInvalidFields().length > 0) {    // There is invalid field
+                data.fv.disableSubmitButtons(true);
+                
+            }
+        });
+
+    // Validate the form manually
+    $('#search').click(function() {
+        $('#defaultForm').bootstrapValidator('validate');
+        
+        //{
+         //}
+});
+
+    $('#clear').click(function() {
+        $('#defaultForm').data('bootstrapValidator').resetForm(true);
+    });
+    $( "#defaultForm" ).submit(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', // this is the parameter list
+data: { 
+    pageNum:"1",
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    showResult(output);
+},
+error: function(output){
+    alert(output);
+}
+});}
+       
+        
+});
+
+    $("#page2").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+ var        thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime+1;
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:thistime,
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert('asdf');
+    //alert(output);
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+     $("#page000").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+ var        thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime-1;
+            //alert(thistime);
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:parseInt(thistime),
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert(output);
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+    
+        $("#page3").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+            var thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime+2;
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:thistime,
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert('asdf');
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+    
+    $("#page4").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+            var thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime+3;
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:thistime,
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert('asdf');
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+    
+       $("#page5").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+            var thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime+4;
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:thistime,
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert('asdf');
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+        $("#page6").click(function( event ) {
+        //alert($('#sortBy').find("option:selected").text());
+        var flag=0;
+        //alert("hehe");
+        if($('#keyWords').val()=="")
+            flag=1;
+        if(!$('#lowPrice').val()==""){
+        if(!isNaN($("#lowPrice").val()))
+        {
+            if($('#lowPrice').val()<0)
+                flag=2;
+        }
+        else
+        {
+            flag=3;
+        }}
+        
+        if(!$('#highPrice').val()==""){
+        if(!isNaN($("#highPrice").val()))
+        {
+            if($('#highPrice').val()<0)
+                flag=4;
+        }
+        else
+        {
+           flag=5;
+        }}
+        
+        if((!$('#highPrice').val()=="")&&(!$('#lowPrice').val()==""))
+        {
+            var tem1=parseFloat($('#highPrice').val());
+            var tem2=parseFloat($('#lowPrice').val());
+            if(tem1<=tem2)
+            {
+                flag=6;
+            }
+        }
+        
+
+if ($("#maxHandlingTime").val()!="") {       if(parseInt($("#maxHandlingTime").val())!=$("#maxHandlingTime").val())
+        {
+            flag=7;
+        }
+        else{
+            if ($("#maxHandlingTime").val()<1)
+                flag=8;
+        }
+    }
+        if(flag!=0)
+        {
+            alert("There is something wrong in your input!\nPay attention to the red message! error=",flag);
+        }
+        
+        if(flag==0)
+        {
+            var thistime=parseInt(document.getElementById("pageNumber").innerHTML);
+        thistime=thistime+1;
+        $.ajax({  
+url: 'http://second.elasticbeanstalk.com/index.php', 
+data: { 
+    pageNum:thistime,
+    keyWords:$("#keyWords").val(),
+    highPrice:$("#highPrice").val(),
+    lowPrice:$("#lowPrice").val(),   
+    
+    new:$("#new").is(":checked"),
+    used:$("#used").is(":checked"),
+    veryGood:$("#veryGood").is(":checked"),
+    good:$("#good").is(":checked"),
+    acceptable:$("#acceptable").is(":checked"),
+    
+    buyItNow:$("#buyItNow").is(":checked"),
+    auction:$("#auction").is(":checked"),
+    classifiedAds:$("#classifiedAds").is(":checked"),
+   
+    returnAccepted:$("#returnAccepted").is(":checked"),
+    
+    freeShipping:$("#freeShipping").is(":checked"),
+    expedited:$("#expedited").is(":checked"),
+    
+    maxHandlingTime:$("#maxHandlingTime").val(),
+    
+    sortBy:$('#sortBy').find("option:selected").val(),
+    resultPerPage:$("#resultPerPage").find("option:selected").text()
+    
+}, type: 'GET',
+success: function(output) {
+    //alert('asdf');
+    showResult(output);
+    //alert("ccc");
+},
+error: function(output){
+    //alert('bbb');
+    alert(output);
+}
+});}
+       
+        
+});
+    
+    
+});
+</script>
+    </head>
+<body>
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '843857382339341',
+      xfbml      : true,
+      version    : 'v2.3'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+
+    function login(addr, lsp, thirtychange, imgshow, link) {
+          FB.login(function(response) {
+              if (response.authResponse) {
+                  // User authorized app
+              } else {
+                  // User cancelled login or did not fully authorize
+              }
+          }, {scope: 'publish_stream'});
+          
+          setStatusThroughFBUI(addr, lsp, thirtychange, imgshow, link);
+        }
+        
+        function setStatusThroughFBUI(addr, lsp, thirtychange, imgshow, link) {
+          var text, obj;
+          var obj = {
+            method: 'feed',       
+            link: link,
+                name: addr,
+                caption: 'Search Information from ebay.com',
+                description: lsp+thirtychange,
+                picture: imgshow
+            };
+                
+            function callback(response) {
+                if(response)
+                    alert("Post Successfully!");
+                else
+                    alert("unsuccessfully!");
+            }
+         
+            FB.ui(obj, callback);
+        }
+</script>
+    
+<div class="container-fluid">
+<div class="row">	
+    <div class="col-xs-12 col-sm-9 col-md-8 col-sm-offset-1 col-md-offset-1">
+    <img src="http://cs-server.usc.edu:45678/hw/hw8/ebay.jpg" class="col-xs-4 col-sm-4 col-md-2">              
+    <h3 class="col-xs-4 col-sm-4 col-md-2">Shopping</h3>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12 col-sm-9 col-md-8 col-sm-offset-2 col-md-offset-2">
+		<form id="defaultForm" method="post">
+            
+			<hr class="colorgraph">
+            <div class="form-group">
+                <div class="row">
+                    <div  class="col-xs-4 col-sm-3 col-md-2">     
+                    <h5>Key words<font color='red'>*</font>:</h5>
+                    </div>
+                    <div  class="col-xs-10 col-sm-10 col-md-10">
+                    <div class="form-group">
+				    <input type="text"  name="keyWords" id="keyWords" class="form-control" placeholder="Key words" tabindex="1">
+                    </div>
+                    </div>
+                </div>
+                
+			</div>
+			<div class="row">
+					<h5 class="col-xs-4 col-sm-4 col-md-2">Price range:</h5>
+				
+					<div class="col-xs-10 col-sm-10 col-md-5">
+                    <div class="form-group">                
+                        <input type="text" name="lowPrice" id="lowPrice" class="form-control" placeholder="from($)" tabindex="2"></div>
+					</div>
+				
+				<div class="col-xs-10 col-sm-10 col-md-5">
+					<div class="form-group">
+						<input type="text" name="highPrice" id="highPrice" class="form-control" placeholder="to($)" tabindex="3">
+					</div>
+				</div>
+			</div>
+            <div class="row">
+                
+				<h5 class="col-xs-4 col-sm-4 col-md-2">Condition:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="new" id="new" value="New" >New&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="used" id="used" value="Used" >Used&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="veryGood" id="veryGood" value="Very Good" >Very Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="good" id="good" value="Good">Good&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="acceptable" id="acceptable" value="Acceptable">Acceptable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    
+					
+                </div>
+			</div>
+			<div class="row">
+                
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Buying formats:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="butItNow" id="buyItNow" value="b" >Buy It Now&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="auction" id="auction" value="a" >Auction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="classifiedAds" id="classifiedAds" value="c" >Classified Ads&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+			<div class="row">
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Seller:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="returnAccepted" id="returnAccepted" value="r" >Return accepted&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+            <div class="row">
+				<h5 class="col-xs-8 col-sm-8 col-md-2">Shipping:</h5>
+                <div class="checkbox col-xs-10 col-sm-10 col-md-9 col-xs-offset-1 col-sm-offset-1 col-md-offset-1">
+					
+                        <input  type="checkbox" name="freeShipping" id="freeShipping" value="f" >Free Shipping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input  type="checkbox" name="expedited" id="expedited" value="e" >Expedited Shipping&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+			</div>
+                <div class="row">
+                    <h5 class="col-xs-8 col-sm-8 col-md-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h5>
+                    <div  class="col-xs-10 col-sm-10 col-md-10">
+                    <div class="form-group">
+				    <input type="text" name="maxHandlingTime" id="maxHandlingTime" class="form-control"  placeholder="Max handling time(days)" tabindex="4">
+                        </div>
+                    </div>
+                </div>
+            
+        <div class="row">
+            <h5 class="col-xs-8 col-sm-8 col-md-2">Sort by:</h5>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 ">
+                
+                    <select id="sortBy" name="sortBy"class="form-control">
+                      <option value="BestMatch">Best Match</option>
+                      <option value="CurrentPriceHighest">Price: highest first</option>
+                      <option value="PricePlusShippingHighest">Price + Shipping: highest first</option>
+                      <option value="PricePlusShippingLowest">Price + Shipping: lowest first</option>
+                    </select>
+            </div>
+        </div>
+        <div class="row">
+            <h5 class="col-xs-8 col-sm-8 col-md-2">Results per page:</h5>
+            <div class="form-group col-xs-10 col-sm-10 col-md-10 ">
+                
+                    <select name="resultPerPage" id="resultPerPage" class="form-control">
+                      <option value="5">5</option>
+                      <option value="10">10</option>
+                    </select>
+            </div>
+        </div>
+			<hr class="colorgraph">
+			<div class="row">
+                <div class="col-xs-4 col-md-2 col-md-offset-8"><input type="reset" onclick="document.getElementById('result').innerHTML='';" name="clear" value="Clear" id="clear" align="right" class="btn btn-default btn-block btn-lg"></div>
+				<div class="col-xs-4 col-md-2"><input type="submit" value="Search" id="search" name="search" align="right" class="btn btn-primary btn-block btn-lg" tabindex="7"></div>
+				
+			</div>
+		</form>
+	</div>
+</div>
+<div class="row">
+    <div id="result" class="col-xs-12 col-sm-10 col-md-10 col-sm-offset-1 col-md-offset-1">
+    </div>
+    </div>
+</div>
+
+    <nav>
+        <ul align="center" id="pageFinder" style='visibility:hidden' class='pagination col-xs-12 col-sm-10 col-md-10 col-sm-offset-2 col-md-offset-3'>
+            <li id='page000'>
+                <a id="page000sp" href='#' aria-label='Previous'>
+                    <span aria-hidden='true'>&laquo;</span>
+                </a>
+            </li>
+            <li id='page1'class='active'>
+            <a href='#'>1</a>
+            </li>
+            <li id='page2'>
+                <a href='#'>2</a>
+            </li>
+            <li id='page3'>
+                <a href='#'>3</a>
+            </li>
+            <li id='page4'>
+                <a href='#'>4</a></li>
+            <li id='page5'>
+                <a href='#'>5</a>
+            </li>
+            <li id='page6'>
+                <a href='#' aria-label='Next'>
+                    <span aria-hidden='true'>&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+<br><br><br>
+
+    <center  id="c">This is page No.<div id="pageNumber">0</div></center>
+</body>
+</html>
